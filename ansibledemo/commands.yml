@@ -1,0 +1,39 @@
+- hosts: web
+  gather_facts: false
+
+  tasks:
+    - name: get date
+      shell: date
+      register: output
+    - debug: var=output
+    - lineinfile:
+        path: /opt/DevOpsClass/ansibledemo/command.txt
+        line: "{{ output.stdout }}"
+        state: present
+        create: yes
+      delegate_to: localhost
+
+    - name: get etc hosts
+      shell: cat /etc/hosts
+      register: output
+    - debug: var=output
+    - lineinfile:
+        path: /opt/DevOpsClass/ansibledemo/command.txt
+        line: "{{ output.stdout }}"
+        state: present
+        create: yes
+      delegate_to: localhost
+
+    - name: get uptime
+      shell: uptime
+      register: output
+    - debug: var=output
+    - lineinfile:
+        path: /opt/DevOpsClass/ansibledemo/command.txt
+        line: "{{ output.stdout }}"
+        state: present
+        create: yes
+      delegate_to: localhost
+
+
+
