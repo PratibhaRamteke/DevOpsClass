@@ -1,1 +1,0 @@
-localhost ansible_connection=local nameserver_ip=10.1.250.10 snmp_port=160-161/udp

@@ -1,9 +1,0 @@
----
-  - hosts: localhost
- 
-    tasks:
-      - name: update namesever entry
-        lineinfile:
-          path: /etc/resolv.conf
-          line: 'nameserver {{ nameserver_ip }}'
-

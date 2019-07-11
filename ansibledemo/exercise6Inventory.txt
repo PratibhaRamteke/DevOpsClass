@@ -1,3 +1,0 @@
-#localhost site_address=https://repo.mysql.com/mysql80-community-release-el7-3.noarch.rpm
-[web]
-root@172.31.8.120 ansible_connection=ssh ansible_ssh_user=root ansible_ssh_pass=password1234 site_address=https://repo.mysql.com/mysql80-community-release-el7-3.noarch.rpm
